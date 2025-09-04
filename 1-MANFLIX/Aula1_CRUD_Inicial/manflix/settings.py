@@ -100,10 +100,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-#Configura o django paa usar o model customizado de usuário que criamos
-# padrão: NOME_DO_APP.NOME_DO_MODEL
-
-AUTH_USER_MODEL = 'app.CustomUser'
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
