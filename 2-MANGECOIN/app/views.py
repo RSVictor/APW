@@ -1,7 +1,9 @@
 from rest_framework.viewsets import ModelViewSet
-
+from rest_framework.views import APIView
 from .serializers import *
 from .models import *
+from random import randint
+from rest_framework.response import Response
 
 class CustomUserView(ModelViewSet):
     queryset = CustomUser.objects.all()
@@ -26,3 +28,22 @@ class TransactionView(ModelViewSet):
 class BetView(ModelViewSet):
     queryset = Bet.objects.all()
     serializer_class = BetSerializer
+
+#1 - apenas usarios autenticados podem fazer jogadas
+#2 - apenas usuarios 18+ podem fazer jogadas
+#3 - apenas usuarios com saldo positivo em MAGECOIN podem jogar
+
+class BetTryView(APIView):
+
+    def get(self,request):
+        # roletas de 5 imagens(0,1,2,3,4)
+        value1 = randint(0,4)
+        value2 = randint(0,4)
+        value3 = randint(0,4)
+
+        
+        return Response(status=200,data={
+            'bet1': value1,
+            'bet2': value2,
+            'bet3': value3
+        })

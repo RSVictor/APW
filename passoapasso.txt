@@ -1,0 +1,70 @@
+-----------------RODAR O DJANGO-----------------------
+
+py -m venv venv
+
+.\venv\Scripts\activate
+
+pip install -r .\requirements.txt
+
+py .\manage.py makemigrations.txt
+
+py .\manage.py makemigrations
+
+py .\manage.py runserver 8080 
+
+
+--------------------QUANDO CLONAR--------------------------------------
+
+py -m venv venv 
+
+.\venv\Scripts\activate
+
+pip install django djangorestframework
+
+pip freeze pip freeze > requirements.txt -r. \requirements.txt
+
+pip install -r.\requirements.txt 
+
+rodar servidor py .\manage.py runserver (se der erro de porta mudar porta ex 8080)
+
+----------------CRIANDO DJANGO---------------------------------------
+
+py --version
+
+pip --version
+
+
+Criar uma pasta
+
+py -m venv venv
+
+.\venv\Scripts\activate
+
+pp install django
+
+pip install django djangorestframework django-cors-headers django-filter
+
+django-admin startproject NOME DO PROJETO (espaço e por ponto)
+
+django-admin startapp NOME DO APP(sem ponto)
+
+Abra o arquivo settings.py 
+
+. Em INSTALLED_APPS adicione o nome dado ao seu APP para que o mesmo passe a ser utilizado no projeto e
+também as demais bibliotecas necessárias
+para trabalhar com o django como API:
+
+rest_framework → biblioteca API REST
+cors_headers → biblioteca para lidar com
+CORS (Cross-Origin Resource Sharing)
+
+necessário o para permitir comunicação entre
+frontend e backend
+
+. py .\manage.py makemigrations 
+
+py .\manage.py migrate
+
+. py .\manage.py createsuperuser
+
+py .\manage.py runserver

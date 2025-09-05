@@ -6,7 +6,7 @@ from .models import *
 
 class AdminCustomUser(UserAdmin):
     model = CustomUser
-    list_display = ['id','name','email']
+    list_display = ['id','name','email','cpf']
     list_display_links = ('id', 'email',)
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
